@@ -11,16 +11,15 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
 
-
 @Repository
-public class EmployeeDAOImpl implements EmployeeDAO {
+public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
     //define field for entitymanager
     private EntityManager entityManager;
 
     //set up constructor injection
     @Autowired
-    public EmployeeDAOImpl(EntityManager entityManager){
+    public EmployeeDAOHibernateImpl(EntityManager entityManager){
         this.entityManager = entityManager;
     }
     @Override
